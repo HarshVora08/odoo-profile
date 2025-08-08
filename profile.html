@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Creative Odoo Developer Profile</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Montserrat:wght@700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Karla', sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .profile-card {
+      width: 700px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .profile-header {
+      position: relative;
+      height: 180px;
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    .profile-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 5px solid white;
+      position: absolute;
+      bottom: -65px;
+      left: 40px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+      background: #ccc;
+      object-fit: cover;
+    }
+    .profile-info {
+      padding: 80px 40px 40px 200px;
+    }
+    .profile-info h1 {
+      margin: 0 0 4px 0;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 2.6rem;
+      color: #2a3f62;
+    }
+    .profile-info p.role {
+      margin: 0 0 12px 0;
+      font-weight: 700;
+      color: #536388;
+      letter-spacing: 1.2px;
+      font-size: 1.1rem;
+    }
+    .profile-info p.contact {
+      margin: 0 0 20px 0;
+      font-style: italic;
+      color: #7191b9;
+      font-size: 0.9rem;
+    }
+    .section {
+      padding: 0 40px 30px 40px;
+      border-top: 1px solid #e3e9f3;
+    }
+    .section-title {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #3a4a74;
+      margin-bottom: 18px;
+      border-bottom: 3px solid #67a6f4;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+    .about-text {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #4a5d82;
+      max-width: 600px;
+    }
+    .skills-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skills-list li {
+      background: #67a6f4;
+      color: white;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 20px;
+      box-shadow: 0 2px 6px rgba(103, 166, 244, 0.4);
+      font-size: 0.95rem;
+      cursor: default;
+      transition: transform 0.2s ease;
+    }
+    .skills-list li:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px rgba(103, 166, 244, 0.7);
+    }
+    .projects-list {
+      list-style: none;
+      padding: 0;
+      max-width: 660px;
+    }
+    .projects-list li {
+      background: #e8f0fe;
+      padding: 16px 20px;
+      margin-bottom: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(104, 140, 238, 0.2);
+      transition: background 0.3s ease;
+      cursor: default;
+    }
+    .projects-list li:hover {
+      background: #d0e1fc;
+    }
+    .projects-list li strong {
+      font-weight: 700;
+      color: #3a4a74;
+      font-size: 1.1rem;
+    }
+    button {
+      background-color: #3a4a74;
+      color: white;
+      font-weight: 600;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 24px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+    button:hover {
+      background-color: #2a3653;
+    }
+    @media (max-width: 768px) {
+      .profile-card {
+        width: 90%;
+      }
+      .profile-info {
+        padding: 140px 20px 40px 20px;
+        text-align: center;
+      }
+      .profile-pic {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin: -90px auto 10px auto;
+        display: block;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <div class="profile-header">
+      <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Profile Picture" class="profile-pic" id="profile-pic">
+    </div>
+    <div class="profile-info">
+      <h1 id="name">Harsh Vora</h1>
+      <p class="role" id="role">Odoo Developer | Python | ERP Solutions</p>
+      <p class="contact" id="contact">Email: hvora141@gmail.com | Location: Ahmedabad </p>
+    </div>
+    <div class="section">
+      <div class="section-title">About Me</div>
+      <p class="about-text" id="about">Experienced Odoo developer specializing in custom module development, integrations, and business process automation. Passionate about optimizing ERP systems and delivering robust business applications.</p>
+    </div>
+    <div class="section">
+      <div class="section-title">Skills</div>
+      <ul class="skills-list" id="skills-list"></ul>
+      <button onclick="addSkill()">Add Skill</button>
+    </div>
+    <div class="section">
+      <div class="section-title">Projects</div>
+      <ul class="projects-list" id="projects-list"></ul>
+      <button onclick="addProject()">Add Project</button>
+    </div>
+  </div>
+  <script>
+    let skills = [
+      "Odoo Development",
+      "Python",
+      "PostgreSQL",
+      "QWeb Reports",
+      "Odoo REST APIs",
+      "Server Deployment",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ];
+    let projects = [
+      {
+        name: "Custom HR Management Module",
+        desc: "Developed for a mid-size firm, enabling custom workflows, integrated payroll, and attendance systems."
+      },
+      {
+        name: "Odoo-Shopify Integration",
+        desc: "Automated real-time synchronization between Odoo ERP and Shopify, improving inventory and order management."
+      }
+    ];
+    function renderSkills() {
+      const list = document.getElementById('skills-list');
+      list.innerHTML = "";
+      skills.forEach(skill => {
+        let li = document.createElement('li');
+        li.textContent = skill;
+        list.appendChild(li);
+      });
+    }
+    function renderProjects() {
+      const list = document.getElementById('projects-list');
+      list.innerHTML = "";
+      projects.forEach(proj => {
+        let li = document.createElement('li');
+        li.innerHTML = `<strong>${proj.name}</strong><br><span>${proj.desc}</span>`;
+        list.appendChild(li);
+      });
+    }
+    function addSkill() {
+      const skill = prompt("Enter new skill:");
+      if (skill && skill.trim()) {
+        skills.push(skill.trim());
+        renderSkills();
+      }
+    }
+    function addProject() {
+      const name = prompt("Project name:");
+      const desc = prompt("Short project description:");
+      if (name && desc) {
+        projects.push({ name: name.trim(), desc: desc.trim() });
+        renderProjects();
+      }
+    }
+    renderSkills();
+    renderProjects();
+  </script>
+</body>
+</html>
